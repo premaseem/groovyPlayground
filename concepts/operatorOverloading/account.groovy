@@ -4,18 +4,33 @@ import groovy.transform.ToString
 
 @ToString
 class Account {
-    BigDecimal balance
+    BigDecimal balance =0.0
+    String type // saving or checking
 
-    Account plus(Account other){
-        return new Account(balance: this.balance + other.balance)
+    BigDecimal plus(Account other){
+        this.balance + other.balance
     }
 
     String toString(){
         return "accont balance : $balance"
     }
 
+    void deposit(BigDecimal amt){
+
+        balance = balance + amt
+//        print balance
+    }
+
+    void withdraw(BigDecimal amt){
+        balance = balance - amt
+    }
 }
 
-Account saving = new Account(balance:100)
-Account checking = new Account(balance:200)
-print saving + checking
+Account saving = new Account(type:"saving")
+saving.deposit(200)
+saving.withdraw(100)
+println "current saving balance $saving.balance"
+//print saving.balance
+Account checking = new Account("type":"checking")
+checking.deposit(1000)
+println saving + checking
