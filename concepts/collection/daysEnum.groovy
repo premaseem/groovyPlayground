@@ -12,3 +12,4 @@ day_range.each { day ->
     println(day)
 }
 print day_range.contains(Days.SUNDAY)
+print day_range.size()
