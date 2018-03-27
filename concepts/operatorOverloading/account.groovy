@@ -12,7 +12,7 @@ class Account {
     }
 
     String toString(){
-        return "accont balance : $balance"
+        "accont balance : $balance"
     }
 
     void deposit(BigDecimal amt){
