@@ -14,3 +14,4 @@ class Person {
 }
 def p = new Person(name:'Janice', age:74)
 assert p.dump() == 'Janice is 74 years old'
+
