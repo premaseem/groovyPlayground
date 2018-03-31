@@ -8,6 +8,11 @@ class Employee {
     def prop1 = "Khan"
 
     @Override
+    void setProperty(String key, Object value) {
+        this.@"$key" = "khan sab"
+    }
+
+    @Override
     Object getProperty(String s) {
 
         if (metaClass.hasProperty(this,s))
@@ -18,7 +23,16 @@ class Employee {
 
     @Override
     Object invokeMethod(String s, Object o) {
+        println("method intercepter called ")
         return "Default handler $s "
+    }
+
+    def methodMissing(String name, def args){
+        println("method missing called on $name")
+    }
+
+    def showSalary(){
+        println("million dollar")
     }
 }
 

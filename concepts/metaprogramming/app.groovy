@@ -7,5 +7,8 @@ package metaprogramming
 */
 
 Employee emp = new Employee()
+emp.showSalary()
 emp.someMethod()
+println emp.prop1
+//emp.prop2 = "premaseem"
 println emp.prop2
