@@ -22,3 +22,7 @@ d.metaClass.prop1 = "prem"
 d.metaClass.someMethod = { -> "some method called" }
 assert d.someMethod() == "some method called"
 assert d.prop1 == "prem"
+
+// every instance gets custom method for string
+String.metaClass.toUpper = {  -> return toUpperCase()}
+print "prem".toUpper()
