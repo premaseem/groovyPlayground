@@ -21,7 +21,7 @@ class NegativeException extends Exception{
 
 }
 
-class Account{
+class BankAccount{
     BigDecimal balance =0.0
 
     def deposit(Integer amt){
@@ -38,7 +38,7 @@ class Account{
 
 }
 
-Account act = new Account()
+BankAccount act = new BankAccount()
 act.deposit(4)
 try {
     act.deposit(-2)

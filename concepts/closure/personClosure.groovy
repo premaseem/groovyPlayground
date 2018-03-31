@@ -1,4 +1,4 @@
-class Person {
+class PersonObj {
     String name
     int age
     String toString() { "$name is $age years old" }
@@ -12,6 +12,6 @@ class Person {
         cl()
     }
 }
-def p = new PersonClass(name:'Janice', age:74)
+def p = new PersonObj(name:'Janice', age:74)
 assert p.dump() == 'Janice is 74 years old'
 
