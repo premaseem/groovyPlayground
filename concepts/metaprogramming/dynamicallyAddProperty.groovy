@@ -26,3 +26,9 @@ assert d.prop1 == "prem"
 // every instance gets custom method for string
 String.metaClass.toUpper = {  -> return toUpperCase()}
 print "prem".toUpper()
+
+use(StringCategory){
+    assert "prem".toSUpper() == "PREM"
+}
+// will not be find here outside use block
+assert "prem".toSUpper() == "PREM"
