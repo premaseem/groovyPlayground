@@ -34,5 +34,12 @@ assert w.yellAtHusband() == "yelling"
 // Immutable
 Virus v = new Virus(type: "bad")
 println v.toString()
-v.type = "good"
-println v.toString()
+//v.type = "good"
+//println v.toString()
+
+// Cloning
+StaticClass cp1 = new StaticClass(name:"aseem",age:46)
+StaticClass cp2 = cp1.clone();
+
+assert ! cp1.is(cp2)
+assert cp1 instanceof Cloneable

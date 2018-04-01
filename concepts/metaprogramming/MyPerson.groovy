@@ -1,5 +1,6 @@
 package metaprogramming
 
+import groovy.transform.AutoClone
 import groovy.transform.Canonical
 import groovy.transform.Sortable
 import groovy.transform.ToString
@@ -32,6 +33,7 @@ class Virus{
 }
 
 @TypeChecked
+@AutoClone
 class StaticClass{
     String name
     Integer age
