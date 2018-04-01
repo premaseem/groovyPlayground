@@ -27,3 +27,6 @@ def list = [p1,p6,p3,p4,p5,p2]
 println( list.toSorted())
 println(list)
 
+// Singleton
+Wife w = Wife.getInstance()
+assert w.yellAtHusband() == "yelling"

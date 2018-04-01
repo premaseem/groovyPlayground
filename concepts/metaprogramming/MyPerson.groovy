@@ -11,3 +11,10 @@ class MyPerson {
     Integer age
 }
 
+@Singleton
+class Wife{
+
+    def yellAtHusband(){
+        "yelling"
+    }
+}
