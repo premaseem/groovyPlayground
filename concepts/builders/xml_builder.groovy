@@ -1,5 +1,6 @@
 package builders
 
+import groovy.json.JsonBuilder
 import groovy.xml.MarkupBuilder
 
 /*
@@ -10,7 +11,7 @@ import groovy.xml.MarkupBuilder
 MarkupBuilder builder = new MarkupBuilder()
 builder.books{
     book(isbn:"978-1935182443"){
-        title "Groovy in Action 2nd Edition"
+        title ("Groovy in Action 2nd Edition")
         author "Dierk Koenig"
         price 50.58
     }
