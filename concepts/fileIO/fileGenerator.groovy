@@ -22,3 +22,8 @@ dir.eachFile{ dirObj->
         println dirObj.name
     }
 }
+
+// made dirs
+new File("one/sub/dir").mkdirs()
+new File("one/sub/dir").deleteDir()
+
