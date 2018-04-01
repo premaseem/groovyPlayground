@@ -30,3 +30,9 @@ println(list)
 // Singleton
 Wife w = Wife.getInstance()
 assert w.yellAtHusband() == "yelling"
+
+// Immutable
+Virus v = new Virus(type: "bad")
+println v.toString()
+v.type = "good"
+println v.toString()
