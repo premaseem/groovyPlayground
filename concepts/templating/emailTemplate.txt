@@ -1,0 +1,11 @@
+Dear Customer $fname
+
+Here is the items you ordered:
+<%
+orders.each{order->
+println "$order.name with price dollar $order.price"
+}
+%>
+
+Thanks
+Aseem Jain
