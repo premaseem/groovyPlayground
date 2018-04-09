@@ -19,5 +19,14 @@
       </library>
     </orderEntry>
     <orderEntry type="library" exported="" name="grapes" level="application" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/org.spockframework/spock-core/jars/spock-core-1.0-groovy-2.4.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
