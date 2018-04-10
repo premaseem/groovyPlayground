@@ -1,9 +1,9 @@
-package spock.wordplay.test
+package spock.wordplayProject.test
 
 import spock.lang.Specification
 import spock.lang.Unroll
-import spock.wordplay.main.Wordplay
-import spock.wordplay.main.WordplayImpl
+import spock.wordplayProject.main.Wordplay
+import spock.wordplayProject.main.WordplayImpl
 
 /*
 @author: Aseem Jain

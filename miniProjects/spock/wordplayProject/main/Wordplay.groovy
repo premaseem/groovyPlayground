@@ -1,4 +1,4 @@
-package spock.wordplay.main
+package spock.wordplayProject.main
 
 /*
 @author: Aseem Jain
