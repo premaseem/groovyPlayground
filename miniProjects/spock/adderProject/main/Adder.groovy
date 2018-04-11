@@ -7,7 +7,7 @@ package spock.adderProject.main
 */
 
 class Adder {
-    def addMe(def first, def second){
-        return 0
+    def add(def first, def second){
+        return first + second
     }
 }
