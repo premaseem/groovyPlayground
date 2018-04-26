@@ -20,9 +20,31 @@ class FirstSpecification extends Specification{
         then:
         result == 3
 
-//        expect:
-//        result == 3
     }
 
+
+    def "should be able to remove from list"(){
+
+        given:
+        def list = [1,2,3]
+
+        when:
+        list.remove(0)
+
+        then:
+        list == [2,3]
+
+    }
+
+    def "test exception"(){
+        given:
+        def list = [1,2,3]
+
+        when:
+        list.remove(20)
+
+        then:
+        thrown(IndexOutOfBoundsException)
+    }
 
 }
