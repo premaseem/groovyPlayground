@@ -30,12 +30,15 @@ class MockTests extends Specification {
     def "verify that method is invoked"(){
 
         given:
-        PaymentGateway paymentGateway = Mock(PaymentGateway)
+        PaymentGateway paymentGateway = Mock()
+        paymentGateway.pay(69) >> true
         Card c = Mock (Card)
+
 
         when:
         paymentGateway.callVisa()
         paymentGateway.pay(2)
+        paymentGateway.pay(69)
 
         c.main()
 
@@ -43,6 +46,20 @@ class MockTests extends Specification {
         1 * paymentGateway.pay(2)
         1 * paymentGateway.callVisa()
         1 * c.main()
+        paymentGateway.pay(69) == true
+    }
+
+
+    def "now it works as expected"() {
+        given:
+        List list = Mock()
+
+        when:
+        int sizeOfList = list.size()
+
+        then:
+        1 * list.size() >> 10
+        sizeOfList == 10
     }
 
 }
