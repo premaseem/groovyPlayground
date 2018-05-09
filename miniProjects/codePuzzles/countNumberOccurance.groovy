@@ -2,17 +2,15 @@ package codePuzzles
 
 /*
 @author: Aseem Jain
-@title: Design Patterns with Java 9
 */
 
 // Question : Count how many times a letter / character is repeated in a word -
 // input: "Rackspace"
 // output: "R-1, a- 2
 
+testfindOccurance()
 
-printOccurance("Rackspace")
-
-void printOccurance(String word){
+String findOccurance(String word){
 
     def wordArray = word.toCharArray()
     Map<Character,Integer> wordMap = new HashMap<>();
@@ -25,12 +23,17 @@ void printOccurance(String word){
             def num = wordMap.get(letter) + 1
             wordMap.put(letter,num)
         }
-
     }
 
+    StringBuffer sb = new StringBuffer()
     for (Character  c : wordMap.keySet()) {
-        print ""+ c +"-"+wordMap.get(c) + " "
+        sb.append( ""+ c +"-"+wordMap.get(c) + " ")
     }
-
+    println "Word ${word} has occurances of word => " + sb.toString()
+    return sb.toString()
 }
 
+void testfindOccurance(){
+    assert "p-1 a-2 R-1 c-2 s-1 e-1 k-1".equals(findOccurance("Rackspace").trim())
+    assert "a-3 m-1".equals(findOccurance("aama").trim())
+}
